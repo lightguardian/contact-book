@@ -13,7 +13,10 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Contact Book</a>
+            <a class="navbar-brand" href="#">
+                Contact Book            
+            </a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,19 +54,7 @@
     <script src = {{ asset('assets/js/bootstrap.js') }} > </script>
     @yield('scripts')
     
-    {{-- <script> 
-    
-    $.ajax({
-        contentType: false,
-        processData:false,
-        url:("http://viacep.com.br/ws/85020190/json/"),
-        dataType:"json",
-        success:function(data){
-            console.log(data);
-        }        
-
-    });
-    </script> --}}
+  
     
 </body>
 

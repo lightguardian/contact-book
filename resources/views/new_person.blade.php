@@ -52,8 +52,6 @@
 @section('scripts')
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-
-
 <script>
 function isCPF(cpf) {
 
@@ -75,27 +73,10 @@ $('#person-data').submit(function(event){
     success: function(data) {
       swal('Sucesso',data.message,'success');
       document.getElementById("person-data").reset();
-      console.log('teste',data);
     }
   });
 });
-// $.ajax({
-//     type: "post",
-//     data: formData,
-//     contentType: false,
-//     processData: false,
-//     url: (url da api),
-//     dataType: "json",
-//     success: function(data) {
-//         console.log(data);
-//     }
-// });
 
-
-
-
-$(function() {
-  alert("teste ajx")
-});</script>
+</script>
 
 @endsection

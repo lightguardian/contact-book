@@ -56,7 +56,10 @@ class PersonController extends Controller
      */
     public function show($id)
     {
-        //
+        $person = Person::where('id',$id)->first();
+
+        dd($person);
+
     }
 
     /**

@@ -19,6 +19,7 @@ Route::get('/', function () {
 })->name('contacts');
 
 Route::get('/pessoa/criar','PersonController@create')->name('form_person');
+Route::get('/pessoa/{id}','PersonController@show')->name('show_person');
 Route::post('/pessoa/criar','PersonController@store')->name('new_person');
 
 Route::get('/endereco/criar','AddressController@create')->name('form_address');
