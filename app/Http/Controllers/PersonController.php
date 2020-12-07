@@ -35,16 +35,29 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
+
+        try {
+            $person = new Person();
+            $person->name = $request->name;
+            $person->cpf = $request->cpf;
+            $person->email = $request->email;
+            $person->birthdate = $request->birthdate;
+            $person->save();
+             
+            //$person->create($request->except(['_token']));
+        } catch (Exception $e) {
+            return response()->json(['status'=>false,'message'=>'Erro no banco de dados!'],500);
+        }
        
-        $person = new Person();
-        $person->name = $request->name;
-        $person->cpf = $request->cpf;
-        $person->email = $request->email;
-        $person->birthdate = $request->birthdate;
-        $person->save();
-        //$person->create($request->except(['_token']));
+      
 
         return response()->json(['status'=>true,'message'=>'Pessoa cadastrada com sucesso!'],200);
+
+       
+       
+
+        
+        
 
     }
 
@@ -58,8 +71,20 @@ class PersonController extends Controller
     {
         $person = Person::where('id',$id)->first();
 
-        dd($person);
+        if($person)
+        {
+            return response()->json(['status'=>true,'message'=>$person],200);
+        } else 
+        {
+            return response()->json(['status'=>true,'message'=>'Item não encontrado na base de dados!'],404);
+        }
 
+
+    }
+
+    public function findCpf($cpf)
+    {
+        
     }
 
     /**

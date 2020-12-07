@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link rel = "stylesheet" href = "{{ asset('assets/css/bootstrap.css')}}">
 
-    
+    {{-- Bootstrap --}}
+    <link rel = "stylesheet" href = "{{ asset('assets/css/bootstrap.css')}}">
+    {{-- JQUERY --}}
+    <script src = {{ asset('assets/js/jquery.js') }} > </script>
+    {{-- MASK --}}
+    <script src = {{ asset('assets/js/mask.js') }} > </script>
+
+
 </head>
 <body>
     <header>
@@ -50,8 +56,9 @@
 
 
         </main>
-    <script src = {{ asset('assets/js/jquery.js') }} > </script>
     <script src = {{ asset('assets/js/bootstrap.js') }} > </script>
+
+
     @yield('scripts')
     
   
