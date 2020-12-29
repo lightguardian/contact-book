@@ -25,5 +25,4 @@ Validações
 - Validação hmtl5 Pattern para o formulário de criação de Pessoa;
 
 
-###### Lucas Aurélio
 
